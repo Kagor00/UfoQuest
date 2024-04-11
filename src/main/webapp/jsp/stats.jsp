@@ -1,4 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page isELIgnored="false" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,17 +10,10 @@
 <div id="container">
     <div class="content">
         <h1>Статистика</h1>
-        <%
-            // Отримуємо значення перемог і поразок з атрибутів сесії
-            Integer victories = (Integer) session.getAttribute("victories");
-            Integer losses = (Integer) session.getAttribute("losses");
-
-            // Якщо значення null, ініціалізуємо їх нулями
-            if (victories == null) victories = 0;
-            if (losses == null) losses = 0;
-        %>
-        <h2>Кількість перемог: <%= victories %></h2>
-        <h2>Кількість поразок: <%= losses %></h2>
+        <c:set var="victories" value="${empty sessionScope.victories ? 0 : sessionScope.victories}" />
+        <c:set var="losses" value="${empty sessionScope.losses ? 0 : sessionScope.losses}" />
+        <h2>Кількість перемог: ${victories}</h2>
+        <h2>Кількість поразок: ${losses}</h2>
     </div>
     <div class="centered">
         <form action="processCall.jsp" method="get">

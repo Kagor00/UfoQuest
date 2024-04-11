@@ -17,6 +17,8 @@ public class ResetStatsServlet extends HttpServlet {
         HttpSession session = request.getSession();
         session.removeAttribute("victories");
         session.removeAttribute("losses");
+        session.setAttribute("victories", 0);
+        session.setAttribute("losses", 0);
         response.sendRedirect("stats.jsp");
     }
 }

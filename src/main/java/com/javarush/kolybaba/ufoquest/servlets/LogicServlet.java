@@ -30,7 +30,7 @@ public class LogicServlet extends HttpServlet {
     private static final String LOSSES_ATTRIBUTE = "losses";
 
     /**
-     * Обрабка GET-запитів з JSP-сторінок
+     * Обробка GET-запитів з JSP-сторінок
      **/
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -47,6 +47,7 @@ public class LogicServlet extends HttpServlet {
         session.setAttribute(LOSSES_ATTRIBUTE, lossesCount);
         req.getServletContext().getRequestDispatcher(jspPage).forward(req, resp);
     }
+
 
     private Integer[] getStats(HttpServletRequest req) {
         HttpSession session = req.getSession();
