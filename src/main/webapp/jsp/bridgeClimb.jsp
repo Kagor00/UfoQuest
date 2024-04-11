@@ -16,7 +16,5 @@
     <input type="submit" name="button" value="Піднятися на місток">
     <input type="submit" name="button" value="Відмовитись підніматися на місток">
 </form>
-<c:set var="contextPath" value="${pageContext.request.contextPath}" />
-<c:set var="imgPath" value="${contextPath}/img/2.jpg" />
 </body>
 </html>
