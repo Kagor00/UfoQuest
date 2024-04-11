@@ -7,7 +7,7 @@
     </head>
 <body>
 <div id="container">
-    <img src="${pageContext.request.contextPath}/img/5.jpg" alt="Image5">
+    <img src="/img/5.jpg" alt="Image5">
 </div>
 <h2>Чудово. Рухаємось далі.</h2>
 <h1>Який космічний апарат перший успішно досягнув поверхні Марса?</h1>

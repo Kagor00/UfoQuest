@@ -7,7 +7,7 @@
 </head>
 <body>
 <div id="container">
-    <img src="${pageContext.request.contextPath}/img/2.jpg" alt="Image2">
+    <img src="/img/2.jpg" alt="Image2">
 </div>
 <h2>Ви прийняли виклик.</h2>
 <h1>Піднятися на капітанський місток?</h1>

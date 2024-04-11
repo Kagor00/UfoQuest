@@ -7,7 +7,7 @@
 </head>
 <body>
 <div id="container">
-    <img src="${pageContext.request.contextPath}/img/1.jpg" alt="Image1">
+    <img src="/img/1.jpg" alt="Image1">
 </div>
 <h1>Прийняти виклик НЛО?</h1>
 <form action="logic" method="get">

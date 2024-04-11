@@ -7,7 +7,7 @@
 </head>
 <body>
 <div id="container">
-    <img src="${pageContext.request.contextPath}/img/6.jpg" alt="Image6">
+    <img src="/img/6.jpg" alt="Image6">
 </div>
 <h1>Що відбувається під час екліпсу,</h1>
 <h1>коли місяць знаходиться між Землею та Сонцем?</h1>

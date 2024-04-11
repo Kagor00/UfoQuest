@@ -6,7 +6,7 @@
     <title>Перемога</title>
 <body>
 <div id="container">
-    <img src="${pageContext.request.contextPath}/img/victory.jpg" alt="Image6">
+    <img src="/img/victory.jpg" alt="victory">
 </div>
 <h2>Ви відповіли правильно на всі питання.</h2>
 <h1>Вітаємо з перемогою!</h1>

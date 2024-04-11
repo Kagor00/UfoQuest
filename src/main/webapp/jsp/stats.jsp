@@ -9,10 +9,17 @@
 <div id="container">
     <div class="content">
         <h1>Статистика</h1>
-        <c:set var="victories" value="${session.getAttribute('victories')}" />
-        <c:set var="losses" value="${session.getAttribute('losses')}" />
-        <h2>Кількість перемог: ${not empty victories ? victories : 0}</h2>
-        <h2>Кількість поразок: ${not empty losses ? losses : 0}</h2>
+        <%
+            // Отримуємо значення перемог і поразок з атрибутів сесії
+            Integer victories = (Integer) session.getAttribute("victories");
+            Integer losses = (Integer) session.getAttribute("losses");
+
+            // Якщо значення null, ініціалізуємо їх нулями
+            if (victories == null) victories = 0;
+            if (losses == null) losses = 0;
+        %>
+        <h2>Кількість перемог: <%= victories %></h2>
+        <h2>Кількість поразок: <%= losses %></h2>
     </div>
     <div class="centered">
         <form action="processCall.jsp" method="get">
