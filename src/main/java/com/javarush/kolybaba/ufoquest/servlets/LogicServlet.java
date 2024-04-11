@@ -1,7 +1,6 @@
-package servlets;
-
-import dialogueTree.QuestMatrix;
-import dialogueTree.UfoQuestMatrix;
+package com.javarush.kolybaba.ufoquest.servlets;
+import com.javarush.kolybaba.ufoquest.dialogueTree.QuestMatrix;
+import com.javarush.kolybaba.ufoquest.dialogueTree.UfoQuestMatrix;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
