@@ -62,7 +62,7 @@ public class UfoQuestMatrix implements QuestMatrix {
     private static final String VICTORY_URL = "/victory.jsp";
     private static final String STATS_URL = "/stats.jsp";
 
-
+    /** Ініціалізація колекція в конструкторі **/
     public UfoQuestMatrix() {
         initializeMatrix();
     }
@@ -73,123 +73,133 @@ public class UfoQuestMatrix implements QuestMatrix {
     private void initializeMatrix() {
 
         // Quest 1
-        Map<String, List<Object>> quest1 = new HashMap<>();
-        List<Object> quest1Accept = new ArrayList<>();
-        quest1Accept.add(BRIDGE_CLIMB_URL);
-        quest1Accept.add(DONT_INCREMENT_VALUE); // victories
-        quest1Accept.add(DONT_INCREMENT_VALUE); // losses
-        quest1.put(ACCEPT_CALL, quest1Accept);
+        Map<String, List<Object>> quest1 = new HashMap<>(); // Мапа сторінки
+
+        List<Object> quest1Accept = new ArrayList<>(); // Список даних відповідної кнопки
+        quest1Accept.add(BRIDGE_CLIMB_URL); // Посилання переадресіції після натискання
+        quest1Accept.add(DONT_INCREMENT_VALUE); // Інкремент перемог
+        quest1Accept.add(DONT_INCREMENT_VALUE); // Інкремент поразок
+        quest1.put(ACCEPT_CALL, quest1Accept); // Додавання параметрів в папу під ключем відповідної кнопки
 
         List<Object> quest1Reject = new ArrayList<>();
         quest1Reject.add(REJECT_CALL_URL);
-        quest1Reject.add(DONT_INCREMENT_VALUE); // victories
-        quest1Reject.add(INCREMENT_VALUE); // losses
+        quest1Reject.add(DONT_INCREMENT_VALUE);
+        quest1Reject.add(INCREMENT_VALUE);
         quest1.put(REJECT_CALL, quest1Reject);
 
         collection.put(QUEST_1, quest1);
 
         // Quest 2
         Map<String, List<Object>> quest2 = new HashMap<>();
+
         List<Object> quest2Accept = new ArrayList<>();
         quest2Accept.add(WHAT_PLANET_URL);
-        quest2Accept.add(DONT_INCREMENT_VALUE); // victories
-        quest2Accept.add(DONT_INCREMENT_VALUE); // losses
+        quest2Accept.add(DONT_INCREMENT_VALUE);
+        quest2Accept.add(DONT_INCREMENT_VALUE);
         quest2.put(BRIDGE_CLIMB_FIRST, quest2Accept);
 
         List<Object> quest2Reject = new ArrayList<>();
         quest2Reject.add(REJECT_BRIDGE_URL);
-        quest2Reject.add(DONT_INCREMENT_VALUE); // victories
-        quest2Reject.add(INCREMENT_VALUE); // losses
+        quest2Reject.add(DONT_INCREMENT_VALUE);
+        quest2Reject.add(INCREMENT_VALUE);
         quest2.put(BRIDGE_CLIMB_SECOND, quest2Reject);
 
         collection.put(QUEST_2, quest2);
 
         // Quest 3
         Map<String, List<Object>> quest3 = new HashMap<>();
+
         List<Object> quest3First = new ArrayList<>();
         quest3First.add(WRONG_ANSWER_URL);
-        quest3First.add(DONT_INCREMENT_VALUE); // victories
-        quest3First.add(INCREMENT_VALUE); // losses
+        quest3First.add(DONT_INCREMENT_VALUE);
+        quest3First.add(INCREMENT_VALUE);
         quest3.put(WHAT_PLANET_FIRST, quest3First);
 
         List<Object> quest3Second = new ArrayList<>();
         quest3Second.add(WHAT_STAR_URL);
-        quest3Second.add(DONT_INCREMENT_VALUE); // victories
-        quest3Second.add(DONT_INCREMENT_VALUE); // losses
+        quest3Second.add(DONT_INCREMENT_VALUE);
+        quest3Second.add(DONT_INCREMENT_VALUE);
         quest3.put(WHAT_PLANET_SECOND, quest3Second);
 
         collection.put(QUEST_3, quest3);
 
         // Quest 4
         Map<String, List<Object>> quest4 = new HashMap<>();
+
         List<Object> quest4First = new ArrayList<>();
         quest4First.add(WHAT_SPACECRAFT_URL);
-        quest4First.add(DONT_INCREMENT_VALUE); // victories
-        quest4First.add(DONT_INCREMENT_VALUE); // losses
+        quest4First.add(DONT_INCREMENT_VALUE);
+        quest4First.add(DONT_INCREMENT_VALUE);
         quest4.put(WHAT_STAR_FIRST, quest4First);
 
         List<Object> quest4Second = new ArrayList<>();
         quest4Second.add(WRONG_ANSWER_URL);
-        quest4Second.add(DONT_INCREMENT_VALUE); // victories
-        quest4Second.add(INCREMENT_VALUE); // losses
+        quest4Second.add(DONT_INCREMENT_VALUE);
+        quest4Second.add(INCREMENT_VALUE);
         quest4.put(WHAT_STAR_SECOND, quest4Second);
 
         collection.put(QUEST_4, quest4);
 
         // Quest 5
         Map<String, List<Object>> quest5 = new HashMap<>();
+
         List<Object> quest5First = new ArrayList<>();
         quest5First.add(WHAT_ECLIPSE_URL);
-        quest5First.add(DONT_INCREMENT_VALUE); // victories
-        quest5First.add(DONT_INCREMENT_VALUE); // losses
+        quest5First.add(DONT_INCREMENT_VALUE);
+        quest5First.add(DONT_INCREMENT_VALUE);
         quest5.put(WHAT_SPACECRAFT_FIRST, quest5First);
 
         List<Object> quest5Second = new ArrayList<>();
         quest5Second.add(WRONG_ANSWER_URL);
-        quest5Second.add(DONT_INCREMENT_VALUE); // victories
-        quest5Second.add(INCREMENT_VALUE); // losses
+        quest5Second.add(DONT_INCREMENT_VALUE);
+        quest5Second.add(INCREMENT_VALUE);
         quest5.put(WHAT_SPACECRAFT_SECOND, quest5Second);
 
         collection.put(QUEST_5, quest5);
 
         // Quest 6
         Map<String, List<Object>> quest6 = new HashMap<>();
+
         List<Object> quest6First = new ArrayList<>();
         quest6First.add(WRONG_ANSWER_URL);
-        quest6First.add(DONT_INCREMENT_VALUE); // victories
-        quest6First.add(INCREMENT_VALUE); // losses
+        quest6First.add(DONT_INCREMENT_VALUE);
+        quest6First.add(INCREMENT_VALUE);
         quest6.put(WHAT_ECLIPSE_FIRST, quest6First);
 
         List<Object> quest6Second = new ArrayList<>();
+
         quest6Second.add(WHAT_OBJECT_URL);
-        quest6Second.add(DONT_INCREMENT_VALUE); // victories
-        quest6Second.add(DONT_INCREMENT_VALUE); // losses
+        quest6Second.add(DONT_INCREMENT_VALUE);
+        quest6Second.add(DONT_INCREMENT_VALUE);
         quest6.put(WHAT_ECLIPSE_SECOND, quest6Second);
 
         collection.put(QUEST_6, quest6);
 
         // Quest 7
         Map<String, List<Object>> quest7 = new HashMap<>();
+
         List<Object> quest7First = new ArrayList<>();
         quest7First.add(WRONG_ANSWER_URL);
-        quest7First.add(DONT_INCREMENT_VALUE); // victories
-        quest7First.add(INCREMENT_VALUE); // losses
+        quest7First.add(DONT_INCREMENT_VALUE);
+        quest7First.add(INCREMENT_VALUE);
         quest7.put(WHAT_OBJECT_FIRST, quest7First);
 
         List<Object> quest7Second = new ArrayList<>();
+
         quest7Second.add(VICTORY_URL);
-        quest7Second.add(DONT_INCREMENT_VALUE); // victories
-        quest7Second.add(DONT_INCREMENT_VALUE); // losses
+        quest7Second.add(DONT_INCREMENT_VALUE);
+        quest7Second.add(DONT_INCREMENT_VALUE);
         quest7.put(WHAT_OBJECT_SECOND, quest7Second);
 
         collection.put(QUEST_7, quest7);
 
         // Victory
         Map<String, List<Object>> victory = new HashMap<>();
+
         List<Object> listForm = new ArrayList<>();
         listForm.add(STATS_URL);
-        listForm.add(INCREMENT_VALUE); // victories
-        listForm.add(DONT_INCREMENT_VALUE); // losses
+        listForm.add(INCREMENT_VALUE);
+        listForm.add(DONT_INCREMENT_VALUE);
         victory.put(CONTINUE, listForm);
 
         collection.put(VICTORY, victory);
@@ -200,7 +210,7 @@ public class UfoQuestMatrix implements QuestMatrix {
      * Реалізація методу інтерфейсу QuestMatrix
      **/
     @Override
-    public List<Object> getFormData(String source, String button) {
+    public List<Object> getFormDataList(String source, String button) {
         return collection.get(source).get(button);
     }
 }

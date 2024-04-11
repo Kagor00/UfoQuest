@@ -1,4 +1,5 @@
 package com.javarush.kolybaba.ufoquest.servlets;
+
 import com.javarush.kolybaba.ufoquest.dialogueTree.QuestMatrix;
 import com.javarush.kolybaba.ufoquest.dialogueTree.UfoQuestMatrix;
 
@@ -12,7 +13,9 @@ import java.io.IOException;
 import java.util.List;
 
 
-/** Сервлет логіки обробки сторінок квесту **/
+/**
+ * Сервлет логіки обробки сторінок квесту
+ **/
 @WebServlet("/jsp/logic")
 public class LogicServlet extends HttpServlet {
 
@@ -26,6 +29,9 @@ public class LogicServlet extends HttpServlet {
     private static final String VICTORIES_ATTRIBUTE = "victories";
     private static final String LOSSES_ATTRIBUTE = "losses";
 
+    /**
+     * Обрабка GET-запитів з JSP-сторінок
+     **/
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession session = req.getSession();
@@ -33,10 +39,10 @@ public class LogicServlet extends HttpServlet {
         Integer lossesCount = getStats(req)[1];
         String source = req.getParameter(SOURCE_PARAMETER);
         String button = req.getParameter(BUTTON_PARAMETER);
-        List<Object> formListInfo = questMatrix.getFormData(source, button);
-        String jspPage = "/jsp/" + formListInfo.get(JSP_PAGE_INDEX);
-        victoriesCount += (Integer) formListInfo.get(VICTORIES_INCREMENT_INDEX);
-        lossesCount += (Integer) formListInfo.get(LOSSES_INCREMENT_INDEX);
+        List<Object> formDataList = questMatrix.getFormDataList(source, button);
+        String jspPage = "/jsp/" + formDataList.get(JSP_PAGE_INDEX);
+        victoriesCount += (Integer) formDataList.get(VICTORIES_INCREMENT_INDEX);
+        lossesCount += (Integer) formDataList.get(LOSSES_INCREMENT_INDEX);
         session.setAttribute(VICTORIES_ATTRIBUTE, victoriesCount);
         session.setAttribute(LOSSES_ATTRIBUTE, lossesCount);
         req.getServletContext().getRequestDispatcher(jspPage).forward(req, resp);
