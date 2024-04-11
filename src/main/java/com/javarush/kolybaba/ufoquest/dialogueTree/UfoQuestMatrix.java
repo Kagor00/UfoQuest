@@ -5,10 +5,17 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Клас реалізації конкретного квесту
+ **/
 public class UfoQuestMatrix implements QuestMatrix {
+
+    // Колекція являє собою мапу, де ключем є сторінка запитання,
+    // значенням є внутрішня мапа. У внутрішній мапі ключ це кнопка форми,
+    // значення це список атрибутів даної кнопки.
     private final Map<String, Map<String, List<Object>>> collection = new HashMap<>();
 
-    // Константи для ключів колекції
+    // Константи сторінок квесту
     private static final String QUEST_1 = "quest1";
     private static final String QUEST_2 = "quest2";
     private static final String QUEST_3 = "quest3";
@@ -60,7 +67,9 @@ public class UfoQuestMatrix implements QuestMatrix {
         initializeMatrix();
     }
 
-
+    /**
+     * Метод заповнення колекції даними
+     **/
     private void initializeMatrix() {
 
         // Quest 1
@@ -186,8 +195,12 @@ public class UfoQuestMatrix implements QuestMatrix {
         collection.put(VICTORY, victory);
     }
 
+
+    /**
+     * Реалізація методу інтерфейсу QuestMatrix
+     **/
     @Override
-    public List<Object> getFormAttributes(String source, String button) {
+    public List<Object> getFormData(String source, String button) {
         return collection.get(source).get(button);
     }
 }

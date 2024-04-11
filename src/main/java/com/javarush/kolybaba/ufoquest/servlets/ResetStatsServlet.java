@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
+
+/** Сервлет для обнулення статистики квесту **/
 @WebServlet("/jsp/resetStats")
 public class ResetStatsServlet extends HttpServlet {
     @Override

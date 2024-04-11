@@ -11,8 +11,12 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
 
+
+/** Сервлет логіки обробки сторінок квесту **/
 @WebServlet("/jsp/logic")
 public class LogicServlet extends HttpServlet {
+
+    // Констинти відповідних параметрів
     private final QuestMatrix questMatrix = new UfoQuestMatrix();
     private static final String SOURCE_PARAMETER = "source";
     private static final String BUTTON_PARAMETER = "button";
@@ -29,7 +33,7 @@ public class LogicServlet extends HttpServlet {
         Integer lossesCount = getStats(req)[1];
         String source = req.getParameter(SOURCE_PARAMETER);
         String button = req.getParameter(BUTTON_PARAMETER);
-        List<Object> formListInfo = questMatrix.getFormAttributes(source, button);
+        List<Object> formListInfo = questMatrix.getFormData(source, button);
         String jspPage = "/jsp/" + formListInfo.get(JSP_PAGE_INDEX);
         victoriesCount += (Integer) formListInfo.get(VICTORIES_INCREMENT_INDEX);
         lossesCount += (Integer) formListInfo.get(LOSSES_INCREMENT_INDEX);
