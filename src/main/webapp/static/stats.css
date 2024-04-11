@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('/img/stats.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    font-family: "JetBrains Mono SemiBold", sans-serif;
+    color: white;
+}
+
+#container {
+    display: flex;
+    flex-direction: column; /* Змінюємо напрямок відображення на вертикальний */
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Змінюємо висоту контейнера на весь екран */
+}
+
+.content {
+    text-align: center;
+}
+
+h1, h2 {
+    margin: 0;
+    padding: 10px;
+}
+
+.centered {
+    margin-top: 30px;
+}
+
+.centered form {
+    margin-bottom: 24px;
+}
+
+.centered input[type="submit"] {
+    cursor: pointer;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #ffffff;
+    color: #232323;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.centered input[type="submit"]:hover {
+    background-color: #d0d0dc;
+}
