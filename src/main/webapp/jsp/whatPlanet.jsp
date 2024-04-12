@@ -7,7 +7,7 @@
 </head>
 <body>
 <div id="container">
-    <img src="/img/3.jpg" alt="Image3">
+    <img src="${pageContext.request.contextPath}/img/3.jpg" alt="Image3">
 </div>
 <h2>Ви піднялися на місток. Отже, перше питання.</h2>
 <h1>Яка планета має найбільший об'єм серед всіх планет в Сонячній системі?</h1>

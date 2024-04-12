@@ -7,7 +7,7 @@
 </head>
 <body>
 <div id="container">
-    <img src="/img/gameover.jpg" alt="gameover">
+    <img src="${pageContext.request.contextPath}/img/gameover.jpg" alt="gameover">
 </div>
 <div class="text">
     <h3>Ви відхилили виклик.</h3>

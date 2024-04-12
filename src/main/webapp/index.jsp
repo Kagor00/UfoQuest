@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link href="./static/index.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/static/index.css" rel="stylesheet">
     <title>Start</title>
 </head>
 <body>

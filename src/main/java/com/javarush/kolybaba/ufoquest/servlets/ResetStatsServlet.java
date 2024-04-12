@@ -1,5 +1,4 @@
 package com.javarush.kolybaba.ufoquest.servlets;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -17,8 +16,6 @@ public class ResetStatsServlet extends HttpServlet {
         HttpSession session = request.getSession();
         session.removeAttribute("victories");
         session.removeAttribute("losses");
-        session.setAttribute("victories", 0);
-        session.setAttribute("losses", 0);
         response.sendRedirect("stats.jsp");
     }
 }

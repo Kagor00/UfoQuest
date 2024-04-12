@@ -1,5 +1,4 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<%@ page isELIgnored="false" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,10 +9,10 @@
 <div id="container">
     <div class="content">
         <h1>Статистика</h1>
-        <c:set var="victories" value="${empty sessionScope.victories ? 0 : sessionScope.victories}" />
-        <c:set var="losses" value="${empty sessionScope.losses ? 0 : sessionScope.losses}" />
-        <h2>Кількість перемог: ${victories}</h2>
-        <h2>Кількість поразок: ${losses}</h2>
+        <c:set var="victories" value="${session.getAttribute('victories')}" />
+        <c:set var="losses" value="${session.getAttribute('losses')}" />
+        <h2>Кількість перемог: ${not empty victories ? victories : 0}</h2>
+        <h2>Кількість поразок: ${not empty losses ? losses : 0}</h2>
     </div>
     <div class="centered">
         <form action="processCall.jsp" method="get">

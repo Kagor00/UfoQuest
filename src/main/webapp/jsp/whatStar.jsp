@@ -7,7 +7,7 @@
 </head>
 <body>
 <div id="container">
-    <img src="/img/4.jpg" alt="Image4">
+    <img src="${pageContext.request.contextPath}/img/4.jpg" alt="Image4">
 </div>
 <h2>Правильно. Наступне питання.</h2>
 <h1>Яка зірка являється найближчою до нашої планети?</h1>

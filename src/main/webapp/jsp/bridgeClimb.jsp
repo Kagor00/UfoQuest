@@ -7,7 +7,7 @@
 </head>
 <body>
 <div id="container">
-    <img src="/img/2.jpg" alt="Image2">
+    <img src="${pageContext.request.contextPath}/img/2.jpg" alt="Image2">
 </div>
 <h2>Ви прийняли виклик.</h2>
 <h1>Піднятися на капітанський місток?</h1>
@@ -16,5 +16,7 @@
     <input type="submit" name="button" value="Піднятися на місток">
     <input type="submit" name="button" value="Відмовитись підніматися на місток">
 </form>
+<c:set var="contextPath" value="${pageContext.request.contextPath}" />
+<c:set var="imgPath" value="${contextPath}/img/2.jpg" />
 </body>
 </html>

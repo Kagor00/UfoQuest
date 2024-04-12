@@ -7,7 +7,7 @@
 </head>
 <body>
 <div id="container">
-    <img src="/img/gameover2.jpg" alt="gameover2">
+    <img src="${pageContext.request.contextPath}/img/gameover2.jpg" alt="gameover2">
 </div>
 <div class="text">
     <h3>Ви відповіли неправильно і програли.</h3>

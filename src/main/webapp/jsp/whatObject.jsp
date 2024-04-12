@@ -7,7 +7,7 @@
 </head>
 <body>
 <div id="container">
-    <img src="/img/7.jpg" alt="Image7">
+    <img src="${pageContext.request.contextPath}/img/7.jpg" alt="Image7">
 </div>
 <h1>Як називається теоретичний об'єкт,</h1>
 <h1>який оточує чорну діру і впливає на рух матерії навколо неї?</h1>
