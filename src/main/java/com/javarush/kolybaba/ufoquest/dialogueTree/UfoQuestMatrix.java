@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Клас реалізації конкретного квесту
+ * Клас реалізації квесту UfoQuest.
  **/
 public class UfoQuestMatrix implements QuestMatrix {
 
@@ -68,26 +68,26 @@ public class UfoQuestMatrix implements QuestMatrix {
     }
 
     /**
-     * Метод заповнення колекції даними
+     * Метод заповнення колекції даними.
      **/
     private void initializeMatrix() {
 
         // Quest 1
         Map<String, List<Object>> quest1 = new HashMap<>(); // Мапа сторінки
 
-        List<Object> quest1Accept = new ArrayList<>(); // Список даних відповідної кнопки
-        quest1Accept.add(BRIDGE_CLIMB_URL); // Посилання переадресіції після натискання
+        List<Object> quest1Accept = new ArrayList<>(); // Список даних першої кнопки
+        quest1Accept.add(BRIDGE_CLIMB_URL); // Посилання переадресації після натискання
         quest1Accept.add(DONT_INCREMENT_VALUE); // Інкремент перемог
         quest1Accept.add(DONT_INCREMENT_VALUE); // Інкремент поразок
-        quest1.put(ACCEPT_CALL, quest1Accept); // Додавання параметрів в папу під ключем відповідної кнопки
+        quest1.put(ACCEPT_CALL, quest1Accept); // Додавання списку у мапу сторінки під ключем відповідної кнопки
 
-        List<Object> quest1Reject = new ArrayList<>();
-        quest1Reject.add(REJECT_CALL_URL);
-        quest1Reject.add(DONT_INCREMENT_VALUE);
-        quest1Reject.add(INCREMENT_VALUE);
-        quest1.put(REJECT_CALL, quest1Reject);
+        List<Object> quest1Reject = new ArrayList<>(); // Список даних другої кнопки
+        quest1Reject.add(REJECT_CALL_URL); // Посилання переадресації після натискання
+        quest1Reject.add(DONT_INCREMENT_VALUE); // Інкремент перемог
+        quest1Reject.add(INCREMENT_VALUE); // Інкремент поразок
+        quest1.put(REJECT_CALL, quest1Reject); // Додавання списку у мапу сторінки під ключем відповідної кнопки
 
-        collection.put(QUEST_1, quest1);
+        collection.put(QUEST_1, quest1); // Додавання форми в колекцію
 
         // Quest 2
         Map<String, List<Object>> quest2 = new HashMap<>();

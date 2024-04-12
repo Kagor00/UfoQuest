@@ -9,8 +9,8 @@ public interface QuestMatrix {
 
     /**
      * Метод класу, який реалізує даний інтерфейс,
-     * має приймати параметр source і button із форми на JSP-сторінці
-     * та повертати дані, необхідні сервлету
+     * має приймати параметри source і button із форми на JSP-сторінці
+     * та повертати дані, необхідні сервлету.
      **/
     List<Object> getFormDataList(String source, String button);
 }
