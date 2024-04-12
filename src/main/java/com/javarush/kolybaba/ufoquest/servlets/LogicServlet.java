@@ -2,7 +2,7 @@ package com.javarush.kolybaba.ufoquest.servlets;
 
 import com.javarush.kolybaba.ufoquest.dialogueTree.QuestMatrix;
 import com.javarush.kolybaba.ufoquest.dialogueTree.UfoQuestMatrix;
-
+import lombok.AllArgsConstructor;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -16,11 +16,17 @@ import java.util.List;
 /**
  * Сервлет логіки обробки сторінок квесту
  **/
+@AllArgsConstructor
 @WebServlet("/jsp/logic")
 public class LogicServlet extends HttpServlet {
 
+    private final QuestMatrix questMatrix;
+
+    public LogicServlet() {
+        this.questMatrix = new UfoQuestMatrix();
+    }
+
     // Констинти відповідних параметрів
-    private final QuestMatrix questMatrix = new UfoQuestMatrix();
     private static final String SOURCE_PARAMETER = "source";
     private static final String BUTTON_PARAMETER = "button";
     private static final int JSP_PAGE_INDEX = 0;

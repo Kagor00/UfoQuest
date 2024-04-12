@@ -27,7 +27,7 @@ class UfoQuestMatrixTest {
     }
 
     /**
-     * Перевірка ініціалізації даних в конструкторі
+     * Перевірка ініціалізації даних в конструкторі.
      **/
     @Test
     void constructor_InitializationTest() throws NoSuchFieldException, IllegalAccessException {
@@ -51,8 +51,11 @@ class UfoQuestMatrixTest {
         assertNotNull(collection.get("victory"));
     }
 
-    /** Перевірка коректності отриманих даних для переходу на відповідні сторінки
-     * та обрахунку статистики **/
+
+    /**
+     * Перевірка коректності отриманих даних для переходу на відповідні сторінки
+     * та зберігання статистики.
+     **/
 
     @ParameterizedTest
     @CsvSource({
@@ -78,5 +81,4 @@ class UfoQuestMatrixTest {
         assertEquals(expectedVictoriesIncrement, formDataList.get(VICTORIES_INCREMENT_INDEX));
         assertEquals(expectedLossesIncrement, formDataList.get(LOSSES_INCREMENT_INDEX));
     }
-
 }
