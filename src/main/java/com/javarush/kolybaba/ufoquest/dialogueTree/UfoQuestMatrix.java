@@ -62,7 +62,7 @@ public class UfoQuestMatrix implements QuestMatrix {
     private static final String VICTORY_URL = "/victory.jsp";
     private static final String STATS_URL = "/stats.jsp";
 
-    /** Ініціалізація колекція в конструкторі **/
+    /** Ініціалізація колекції в конструкторі **/
     public UfoQuestMatrix() {
         initializeMatrix();
     }
