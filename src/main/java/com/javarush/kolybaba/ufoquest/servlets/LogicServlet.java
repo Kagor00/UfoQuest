@@ -41,8 +41,9 @@ public class LogicServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession session = req.getSession();
-        Integer victoriesCount = getStats(req)[0];
-        Integer lossesCount = getStats(req)[1];
+        int[] stats = getStats(req);
+        Integer victoriesCount = stats[0];
+        Integer lossesCount = stats[1];
         String source = req.getParameter(SOURCE_PARAMETER);
         String button = req.getParameter(BUTTON_PARAMETER);
         List<Object> formDataList = questMatrix.getFormDataList(source, button);
@@ -55,7 +56,7 @@ public class LogicServlet extends HttpServlet {
     }
 
 
-    private Integer[] getStats(HttpServletRequest req) {
+    private int[] getStats(HttpServletRequest req) {
         HttpSession session = req.getSession();
         Integer victoriesCount = (Integer) session.getAttribute(VICTORIES_ATTRIBUTE);
         Integer lossesCount = (Integer) session.getAttribute(LOSSES_ATTRIBUTE);
@@ -65,6 +66,6 @@ public class LogicServlet extends HttpServlet {
         if (lossesCount == null) {
             lossesCount = 0;
         }
-        return new Integer[]{victoriesCount, lossesCount};
+        return new int[]{victoriesCount, lossesCount};
     }
 }

@@ -37,7 +37,7 @@ class LogicServletTest {
     }
 
     @Test
-    void testDoGet() throws Exception {
+    void doGetTest() throws Exception {
 
         // Очікувані параметри для перевірки
         String source = "testSource";
