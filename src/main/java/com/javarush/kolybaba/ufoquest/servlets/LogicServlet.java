@@ -14,7 +14,7 @@ import java.util.List;
 
 
 /**
- * Сервлет логіки обробки сторінок квесту
+ * Сервлет логіки обробки сторінок квесту.
  **/
 @AllArgsConstructor
 @WebServlet("/jsp/logic")
@@ -36,7 +36,7 @@ public class LogicServlet extends HttpServlet {
     private static final String LOSSES_ATTRIBUTE = "losses";
 
     /**
-     * Обробка GET-запитів з JSP-сторінок
+     * Обробка GET-запитів з JSP-сторінок.
      **/
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

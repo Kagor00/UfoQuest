@@ -3,7 +3,7 @@ package com.javarush.kolybaba.ufoquest.dialogueTree;
 import java.util.List;
 
 /**
- * Інтерфейс для квестів
+ * Інтерфейс для квестів.
  **/
 public interface QuestMatrix {
 

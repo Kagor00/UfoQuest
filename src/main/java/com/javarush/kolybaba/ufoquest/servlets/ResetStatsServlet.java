@@ -1,4 +1,5 @@
 package com.javarush.kolybaba.ufoquest.servlets;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -8,7 +9,9 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 
-/** Сервлет для обнулення статистики квесту **/
+/**
+ * Сервлет для обнулення статистики квесту.
+ **/
 @WebServlet("/jsp/resetStats")
 public class ResetStatsServlet extends HttpServlet {
     @Override
