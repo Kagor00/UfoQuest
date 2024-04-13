@@ -26,7 +26,7 @@ public class LogicServlet extends HttpServlet {
         this.questMatrix = new UfoQuestMatrix();
     }
 
-    // Констинти відповідних параметрів
+    // Константи відповідних параметрів
     private static final String SOURCE_PARAMETER = "source";
     private static final String BUTTON_PARAMETER = "button";
     private static final int JSP_PAGE_INDEX = 0;

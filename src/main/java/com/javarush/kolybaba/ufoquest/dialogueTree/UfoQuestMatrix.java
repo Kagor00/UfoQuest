@@ -14,7 +14,7 @@ public class UfoQuestMatrix implements QuestMatrix {
     // Колекція являє собою мапу, де ключем є сторінка запитання,
     // значенням є внутрішня мапа. У внутрішній мапі ключ це кнопка форми,
     // значення це список атрибутів даної кнопки.
-    private final Map<String, Map<String, List<Object>>> collection = new HashMap<>();
+    private final Map<String, Map<String, List<Object>>> collection;
 
     // Константи сторінок квесту
     private static final String QUEST_1 = "quest1";
@@ -67,6 +67,7 @@ public class UfoQuestMatrix implements QuestMatrix {
      * Ініціалізація колекції в конструкторі.
      **/
     public UfoQuestMatrix() {
+        collection = new HashMap<>();
         initializeMatrix();
     }
 
