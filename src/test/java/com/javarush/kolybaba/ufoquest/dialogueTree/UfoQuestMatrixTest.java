@@ -55,7 +55,6 @@ class UfoQuestMatrixTest {
      * Перевірка коректності отриманих даних для переходу на відповідні сторінки
      * та зберігання статистики.
      **/
-
     @ParameterizedTest
     @CsvSource({
             "quest1, Прийняти виклик, /bridgeClimb.jsp, 0, 0",
