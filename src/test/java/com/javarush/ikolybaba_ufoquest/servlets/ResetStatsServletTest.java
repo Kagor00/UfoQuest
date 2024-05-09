@@ -1,14 +1,12 @@
-package com.javarush.kolybaba.ufoquest.servlets;
+package com.javarush.ikolybaba_ufoquest.servlets;
 
 import org.junit.jupiter.api.Test;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
-import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-
 import java.io.IOException;
 
 import static org.mockito.Mockito.*;
@@ -16,7 +14,7 @@ import static org.mockito.Mockito.*;
 class ResetStatsServletTest {
 
     @Test
-    void doPostTest() throws IOException, ServletException {
+    void doPostTest() throws IOException  {
 
         // Створення мок об'єктів
         HttpServletRequest request = mock(HttpServletRequest.class);

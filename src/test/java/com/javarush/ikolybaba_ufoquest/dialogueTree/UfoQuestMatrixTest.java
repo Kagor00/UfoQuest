@@ -1,4 +1,4 @@
-package com.javarush.kolybaba.ufoquest.dialogueTree;
+package com.javarush.ikolybaba_ufoquest.dialogueTree;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

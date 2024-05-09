@@ -1,7 +1,7 @@
-package com.javarush.kolybaba.ufoquest.servlets;
+package com.javarush.ikolybaba_ufoquest.servlets;
 
-import com.javarush.kolybaba.ufoquest.dialogueTree.QuestMatrix;
-import com.javarush.kolybaba.ufoquest.dialogueTree.UfoQuestMatrix;
+import com.javarush.ikolybaba_ufoquest.dialogueTree.QuestMatrix;
+import com.javarush.ikolybaba_ufoquest.dialogueTree.UfoQuestMatrix;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
@@ -21,7 +21,6 @@ class LogicServletTest {
     private LogicServlet logicServlet;
     private HttpServletRequest request;
     private HttpServletResponse response;
-    private HttpSession session;
     private QuestMatrix questMatrix;
 
     @BeforeEach
@@ -30,7 +29,7 @@ class LogicServletTest {
         logicServlet = new LogicServlet(questMatrix); // Передаємо мок questMatrix через конструктор
         request = mock(HttpServletRequest.class);
         response = mock(HttpServletResponse.class);
-        session = mock(HttpSession.class);
+        HttpSession session = mock(HttpSession.class);
 
         // Мокуємо поведінку getSession для HttpServletRequest
         when(request.getSession()).thenReturn(session);

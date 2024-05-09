@@ -1,7 +1,7 @@
-package com.javarush.kolybaba.ufoquest.servlets;
+package com.javarush.ikolybaba_ufoquest.servlets;
 
-import com.javarush.kolybaba.ufoquest.dialogueTree.QuestMatrix;
-import com.javarush.kolybaba.ufoquest.dialogueTree.UfoQuestMatrix;
+import com.javarush.ikolybaba_ufoquest.dialogueTree.QuestMatrix;
+import com.javarush.ikolybaba_ufoquest.dialogueTree.UfoQuestMatrix;
 import lombok.AllArgsConstructor;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
