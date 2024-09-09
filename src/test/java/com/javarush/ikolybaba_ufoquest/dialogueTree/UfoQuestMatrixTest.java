@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class UfoQuestMatrixTest {
 
-    // Константи індексів отриманих даних
+    // Константи індексів отриманих даних.
     private static final int JSP_PAGE_INDEX = 0;
     private static final int VICTORIES_INCREMENT_INDEX = 1;
     private static final int LOSSES_INCREMENT_INDEX = 2;
