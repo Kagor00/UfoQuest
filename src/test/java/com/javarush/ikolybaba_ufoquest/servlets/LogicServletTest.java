@@ -17,7 +17,6 @@ import java.util.List;
 import static org.mockito.Mockito.*;
 
 class LogicServletTest {
-
     private LogicServlet logicServlet;
     private HttpServletRequest request;
     private HttpServletResponse response;
@@ -26,7 +25,7 @@ class LogicServletTest {
     @BeforeEach
     void setUp() {
         questMatrix = Mockito.mock(UfoQuestMatrix.class); // Мокуємо questMatrix
-        logicServlet = new LogicServlet(); // Передаємо мок questMatrix через конструктор
+        logicServlet = new LogicServlet(questMatrix); // Передаємо мок questMatrix через конструктор
         request = mock(HttpServletRequest.class);
         response = mock(HttpServletResponse.class);
         HttpSession session = mock(HttpSession.class);
