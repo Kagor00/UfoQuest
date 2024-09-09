@@ -18,7 +18,7 @@ class UfoQuestMatrixTest {
     private static final int VICTORIES_INCREMENT_INDEX = 1;
     private static final int LOSSES_INCREMENT_INDEX = 2;
 
-    private UfoQuestMatrix matrix;
+    private QuestMatrix matrix;
 
     @BeforeEach
     void setUp() {
@@ -73,6 +73,8 @@ class UfoQuestMatrixTest {
             "quest7, Горизонт подій, /victory.jsp, 0, 0",
             "victory, Продовжити, /stats.jsp, 1, 0"
     })
+
+
     void getFormDataListTest(String source, String button, String expectedUrl, int expectedVictoriesIncrement, int expectedLossesIncrement) {
         List<Object> formDataList = matrix.getFormDataList(source, button);
         assertEquals(expectedUrl, formDataList.get(JSP_PAGE_INDEX));

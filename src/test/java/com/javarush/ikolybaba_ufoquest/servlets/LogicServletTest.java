@@ -17,7 +17,6 @@ import java.util.List;
 import static org.mockito.Mockito.*;
 
 class LogicServletTest {
-
     private LogicServlet logicServlet;
     private HttpServletRequest request;
     private HttpServletResponse response;
