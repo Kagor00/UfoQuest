@@ -63,37 +63,41 @@ public class UfoQuestMatrix implements QuestMatrix {
     private static final String VICTORY_URL = "/victory.jsp";
     private static final String STATS_URL = "/stats.jsp";
 
-    /**
-     * Ініціалізація колекції в конструкторі.
-     **/
     public UfoQuestMatrix() {
         collection = new HashMap<>();
         initializeMatrix();
     }
 
-    /**
-     * Метод заповнення колекції даними.
-     **/
     private void initializeMatrix() {
+        initializeQuest1();
+        initializeQuest2();
+        initializeQuest3();
+        initializeQuest4();
+        initializeQuest5();
+        initializeQuest6();
+        initializeQuest7();
+        initializeVictory();
+    }
 
-        // Quest 1
-        Map<String, List<Object>> quest1 = new HashMap<>(); // Мапа сторінки
+    private void initializeQuest1() {
+        Map<String, List<Object>> quest1 = new HashMap<>();
 
-        List<Object> quest1Accept = new ArrayList<>(); // Список даних першої кнопки
-        quest1Accept.add(BRIDGE_CLIMB_URL); // Посилання переадресації після натискання
-        quest1Accept.add(DONT_INCREMENT_VALUE); // Інкремент перемог
-        quest1Accept.add(DONT_INCREMENT_VALUE); // Інкремент поразок
-        quest1.put(ACCEPT_CALL, quest1Accept); // Додавання списку у мапу сторінки під ключем відповідної кнопки
+        List<Object> quest1Accept = new ArrayList<>();
+        quest1Accept.add(BRIDGE_CLIMB_URL);
+        quest1Accept.add(DONT_INCREMENT_VALUE);
+        quest1Accept.add(DONT_INCREMENT_VALUE);
+        quest1.put(ACCEPT_CALL, quest1Accept);
 
-        List<Object> quest1Reject = new ArrayList<>(); // Список даних другої кнопки
-        quest1Reject.add(REJECT_CALL_URL); // Посилання переадресації після натискання
-        quest1Reject.add(DONT_INCREMENT_VALUE); // Інкремент перемог
-        quest1Reject.add(INCREMENT_VALUE); // Інкремент поразок
-        quest1.put(REJECT_CALL, quest1Reject); // Додавання списку у мапу сторінки під ключем відповідної кнопки
+        List<Object> quest1Reject = new ArrayList<>();
+        quest1Reject.add(REJECT_CALL_URL);
+        quest1Reject.add(DONT_INCREMENT_VALUE);
+        quest1Reject.add(INCREMENT_VALUE);
+        quest1.put(REJECT_CALL, quest1Reject);
 
-        collection.put(QUEST_1, quest1); // Додавання форми в колекцію
+        collection.put(QUEST_1, quest1);
+    }
 
-        // Quest 2
+    private void initializeQuest2() {
         Map<String, List<Object>> quest2 = new HashMap<>();
 
         List<Object> quest2Accept = new ArrayList<>();
@@ -109,8 +113,9 @@ public class UfoQuestMatrix implements QuestMatrix {
         quest2.put(BRIDGE_CLIMB_SECOND, quest2Reject);
 
         collection.put(QUEST_2, quest2);
+    }
 
-        // Quest 3
+    private void initializeQuest3() {
         Map<String, List<Object>> quest3 = new HashMap<>();
 
         List<Object> quest3First = new ArrayList<>();
@@ -126,8 +131,9 @@ public class UfoQuestMatrix implements QuestMatrix {
         quest3.put(WHAT_PLANET_SECOND, quest3Second);
 
         collection.put(QUEST_3, quest3);
+    }
 
-        // Quest 4
+    private void initializeQuest4() {
         Map<String, List<Object>> quest4 = new HashMap<>();
 
         List<Object> quest4First = new ArrayList<>();
@@ -143,8 +149,9 @@ public class UfoQuestMatrix implements QuestMatrix {
         quest4.put(WHAT_STAR_SECOND, quest4Second);
 
         collection.put(QUEST_4, quest4);
+    }
 
-        // Quest 5
+    private void initializeQuest5() {
         Map<String, List<Object>> quest5 = new HashMap<>();
 
         List<Object> quest5First = new ArrayList<>();
@@ -160,8 +167,9 @@ public class UfoQuestMatrix implements QuestMatrix {
         quest5.put(WHAT_SPACECRAFT_SECOND, quest5Second);
 
         collection.put(QUEST_5, quest5);
+    }
 
-        // Quest 6
+    private void initializeQuest6() {
         Map<String, List<Object>> quest6 = new HashMap<>();
 
         List<Object> quest6First = new ArrayList<>();
@@ -171,15 +179,15 @@ public class UfoQuestMatrix implements QuestMatrix {
         quest6.put(WHAT_ECLIPSE_FIRST, quest6First);
 
         List<Object> quest6Second = new ArrayList<>();
-
         quest6Second.add(WHAT_OBJECT_URL);
         quest6Second.add(DONT_INCREMENT_VALUE);
         quest6Second.add(DONT_INCREMENT_VALUE);
         quest6.put(WHAT_ECLIPSE_SECOND, quest6Second);
 
         collection.put(QUEST_6, quest6);
+    }
 
-        // Quest 7
+    private void initializeQuest7() {
         Map<String, List<Object>> quest7 = new HashMap<>();
 
         List<Object> quest7First = new ArrayList<>();
@@ -189,15 +197,15 @@ public class UfoQuestMatrix implements QuestMatrix {
         quest7.put(WHAT_OBJECT_FIRST, quest7First);
 
         List<Object> quest7Second = new ArrayList<>();
-
         quest7Second.add(VICTORY_URL);
         quest7Second.add(DONT_INCREMENT_VALUE);
         quest7Second.add(DONT_INCREMENT_VALUE);
         quest7.put(WHAT_OBJECT_SECOND, quest7Second);
 
         collection.put(QUEST_7, quest7);
+    }
 
-        // Victory
+    private void initializeVictory() {
         Map<String, List<Object>> victory = new HashMap<>();
 
         List<Object> listForm = new ArrayList<>();
@@ -209,10 +217,6 @@ public class UfoQuestMatrix implements QuestMatrix {
         collection.put(VICTORY, victory);
     }
 
-
-    /**
-     * Реалізація методу інтерфейсу QuestMatrix.
-     **/
     @Override
     public List<Object> getFormDataList(String source, String button) {
         return collection.get(source).get(button);
