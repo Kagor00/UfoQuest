@@ -26,7 +26,7 @@ class LogicServletTest {
     @BeforeEach
     void setUp() {
         questMatrix = Mockito.mock(UfoQuestMatrix.class); // Мокуємо questMatrix
-        logicServlet = new LogicServlet(questMatrix); // Передаємо мок questMatrix через конструктор
+        logicServlet = new LogicServlet(); // Передаємо мок questMatrix через конструктор
         request = mock(HttpServletRequest.class);
         response = mock(HttpServletResponse.class);
         HttpSession session = mock(HttpSession.class);

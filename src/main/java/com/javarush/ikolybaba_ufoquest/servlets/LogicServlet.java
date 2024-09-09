@@ -19,12 +19,8 @@ import java.util.List;
 @AllArgsConstructor
 @WebServlet("/jsp/logic")
 public class LogicServlet extends HttpServlet {
+    private final QuestMatrix questMatrix = new UfoQuestMatrix();
 
-    private final QuestMatrix questMatrix;
-
-    public LogicServlet() {
-        this.questMatrix = new UfoQuestMatrix();
-    }
 
     // Константи відповідних параметрів
     private static final String SOURCE_PARAMETER = "source";

@@ -18,7 +18,7 @@ class UfoQuestMatrixTest {
     private static final int VICTORIES_INCREMENT_INDEX = 1;
     private static final int LOSSES_INCREMENT_INDEX = 2;
 
-    private UfoQuestMatrix matrix;
+    private QuestMatrix matrix;
 
     @BeforeEach
     void setUp() {
